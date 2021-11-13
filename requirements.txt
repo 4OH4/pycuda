@@ -1,0 +1,2 @@
+numpy
+# pycuda  # generally built from source: https://wiki.tiker.net/PyCuda/Installation/

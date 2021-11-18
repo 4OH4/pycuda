@@ -355,7 +355,7 @@ if __name__ == '__main__':
 
     print(f'Median_filter - using CUDA: {use_cuda}')
 
-    im_x, im_y = 32, 16
+    im_x, im_y = 128, 128
     # im_x, im_y = 1024, 1024
     dtype = np.uint16
 
@@ -368,7 +368,7 @@ if __name__ == '__main__':
     total_cycles = repeats*report_every
 
     # Create all the image frames in advance using random numbers
-    all_frames = np.random.random_integers(
+    all_frames = np.random.randint(
         0, 255*255, size=(total_cycles, buff1.image_width, buff1.image_height)).astype(buff1.dtype)
 
     for i in range(1, total_cycles+1):
